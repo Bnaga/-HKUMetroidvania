@@ -7,7 +7,7 @@ public class PlayerController : PhysicsObject {
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     private bool shoot;
-    bool faceLeft;
+    public bool faceLeft;
     float moverx;
 
     private Animator animator;
@@ -50,8 +50,6 @@ public class PlayerController : PhysicsObject {
         animator.SetFloat("MoveX", moverx);
         animator.SetBool("Grounded", grounded);
         animator.SetFloat("VeloX", Mathf.Abs(velocity.x) / maxSpeed);
-        animator.SetBool("grounded", grounded);
-        animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
         animator.SetFloat("VeloY", Mathf.Abs(velocity.y) / jumpTakeOffSpeed);
 
 
